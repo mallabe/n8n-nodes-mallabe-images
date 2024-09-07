@@ -1,3 +1,14 @@
+```sh
+pnpm link n8n-nodes-mallabe-images
+pnpm link n8n-nodes-mallabe-images --global
+pnpm run build
+
+# @see https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/
+cd ~/.n8n 
+n8n start
+```
+
+
 # n8n-nodes-_node-name_
 
 This is an n8n community node. It lets you use _app/service name_ in your n8n workflows.

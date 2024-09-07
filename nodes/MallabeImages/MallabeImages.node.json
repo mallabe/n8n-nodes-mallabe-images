@@ -1,0 +1,18 @@
+{
+	"node": "n8n-nodes-base.mallabeImages",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Images"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://www.mallabe.com"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://www.mallabe.com"
+			}
+		]
+	}
+}
