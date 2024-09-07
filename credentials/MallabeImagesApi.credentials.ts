@@ -31,7 +31,7 @@ export class MallabeImagesApi implements ICredentialType {
 
 	test: ICredentialTestRequest = {
 		request: {
-			baseURL: 'https://api.dev.mallabe.com',
+			baseURL: 'https://api.mallabe.com',
 			url: '/v1/accounts/me',
 			method: 'POST'
 		},

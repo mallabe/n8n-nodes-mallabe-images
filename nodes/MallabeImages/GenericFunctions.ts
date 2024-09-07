@@ -20,7 +20,7 @@ export async function mallabeImagesRequest(
 ) {
 	const { apiKey } = await this.getCredentials('mallabeImagesApi');
 	const n8nApiKey = 'xPHYKn7ar42idNoYrbyuc1xTk6LDWpPoIGvCRLK2';
-	const productionUrl = 'https://api.dev.mallabe.com';
+	const productionUrl = 'https://api.mallabe.com';
 
 	const options: IHttpRequestOptions = {
 		headers: {
