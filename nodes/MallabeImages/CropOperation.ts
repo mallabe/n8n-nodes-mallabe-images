@@ -12,6 +12,7 @@ export const cropFields: INodeProperties[] = [
 			},
 		},
 		default: '',
+		description: 'Public URL of the image file to crop'
 		// description:
 		// 	'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},

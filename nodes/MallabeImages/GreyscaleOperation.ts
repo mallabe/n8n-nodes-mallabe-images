@@ -12,6 +12,7 @@ export const greyscaleFields: INodeProperties[] = [
 			},
 		},
 		default: '',
+		description: 'Public URL of the image file to greyscale'
 		// description:
 		// 	'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},

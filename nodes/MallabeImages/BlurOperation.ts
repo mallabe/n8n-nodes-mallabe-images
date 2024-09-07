@@ -12,8 +12,7 @@ export const blurFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description:
-			'Public URL of the image file to blur.',
+		description: 'Public URL of the image file to blur',
 		// description:
 		// 	'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},
