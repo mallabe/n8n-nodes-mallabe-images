@@ -1,26 +1,22 @@
-![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
+![Banner image](https://assets.ycodeapp.com/assets/app17961/Images/0JxKRiwbSMIYGdQ2jaX6T2j6TaKeSfeieM8rWmXC-published.png)
 
 # n8n-nodes-mallabe-images
 
-This is an n8n community node for [Mallabe Images](https://mallabe.com/).
+This is an n8n community node for [Mallabe Images](https://www.mallabe.com/).
 
 It allows you to manipulate images using different operations.
 
-For more information, refer to the [Mallabe website](https://mallabe.com/).
+For more information, refer to the [Mallabe website](https://www.mallabe.com/).
 
 Current supported operations:
-- Resize
-- Compress
-- Get Metadata
-- Crop
-- Rotate
-- Flip / Flop
-- Greyscale
-- Join
-
-## More information
-
-Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/creating-nodes/) for detailed information on building your own nodes.
+- Resize Image
+- Compress Image
+- Get Image Metadata
+- Crop Image
+- Rotate Image
+- Flip / Flop Image
+- Greyscale Image
+- Join 2 Images
 
 ## License
 
