@@ -1,4 +1,4 @@
-![Banner image](https://assets.ycodeapp.com/assets/app17961/Images/0JxKRiwbSMIYGdQ2jaX6T2j6TaKeSfeieM8rWmXC-published.png)
+![Mallabe Logo](/docs/mallabe-logo.png)
 
 # n8n-nodes-mallabe-images
 
