@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "description": "n8n community node to alter images using Mallabe Images",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "n8n",
+    "image manipulation",
+    "mallabe",
+    "no-code",
+    "n8n-node",
+    "n8n-plugin"
   ],
   "license": "MIT",
   "homepage": "",
