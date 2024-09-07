@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-mallabe-images",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "n8n community node to alter images using Mallabe Images",
   "keywords": [
     "n8n-community-node-package",
