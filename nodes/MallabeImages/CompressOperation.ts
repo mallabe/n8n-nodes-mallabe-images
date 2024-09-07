@@ -12,22 +12,22 @@ export const compressFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description:
-			'Public URL of the image file to compress. Use this field or `Image in Base64 Format`.',
+		// description:
+		// 	'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},
-	{
-		displayName: 'Image in Base64 Format',
-		name: 'base64Image',
-		type: 'string',
-		displayOptions: {
-			show: {
-				operation: ['compress'],
-				resource: ['image'],
-			},
-		},
-		default: '',
-		description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
-	},
+	// {
+	// 	displayName: 'Image in Base64 Format',
+	// 	name: 'base64Image',
+	// 	type: 'string',
+	// 	displayOptions: {
+	// 		show: {
+	// 			operation: ['blur'],
+	// 			resource: ['image'],
+	// 		},
+	// 	},
+	// 	default: '',
+	// 	description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
+	// },
 	{
 		displayName: 'Quality',
 		name: 'quality',

@@ -12,22 +12,22 @@ export const rotateFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description:
-			'Public URL of the image file to rotate. Use this field or `Image in Base64 Format`.',
+		// description:
+		// 	'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},
-	{
-		displayName: 'Image in Base64 Format',
-		name: 'base64Image',
-		type: 'string',
-		displayOptions: {
-			show: {
-				operation: ['rotate'],
-				resource: ['image'],
-			},
-		},
-		default: '',
-		description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
-	},
+	// {
+	// 	displayName: 'Image in Base64 Format',
+	// 	name: 'base64Image',
+	// 	type: 'string',
+	// 	displayOptions: {
+	// 		show: {
+	// 			operation: ['blur'],
+	// 			resource: ['image'],
+	// 		},
+	// 	},
+	// 	default: '',
+	// 	description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
+	// },
 	{
 		displayName: 'Rotation Angle',
 		name: 'angle',

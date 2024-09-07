@@ -13,21 +13,23 @@ export const blurFields: INodeProperties[] = [
 		},
 		default: '',
 		description:
-			'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
+			'Public URL of the image file to blur.',
+		// description:
+		// 	'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},
-	{
-		displayName: 'Image in Base64 Format',
-		name: 'base64Image',
-		type: 'string',
-		displayOptions: {
-			show: {
-				operation: ['blur'],
-				resource: ['image'],
-			},
-		},
-		default: '',
-		description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
-	},
+	// {
+	// 	displayName: 'Image in Base64 Format',
+	// 	name: 'base64Image',
+	// 	type: 'string',
+	// 	displayOptions: {
+	// 		show: {
+	// 			operation: ['blur'],
+	// 			resource: ['image'],
+	// 		},
+	// 	},
+	// 	default: '',
+	// 	description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
+	// },
 	{
 		displayName: 'Blur Value',
 		name: 'value',

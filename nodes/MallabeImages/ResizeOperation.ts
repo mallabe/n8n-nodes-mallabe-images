@@ -12,22 +12,22 @@ export const resizeFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description:
-			'Public URL of the image file to resize. Use this field or `Image in Base64 Format`.',
+		// description:
+		// 	'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},
-	{
-		displayName: 'Image in Base64 Format',
-		name: 'base64Image',
-		type: 'string',
-		displayOptions: {
-			show: {
-				operation: ['resize'],
-				resource: ['image'],
-			},
-		},
-		default: '',
-		description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
-	},
+	// {
+	// 	displayName: 'Image in Base64 Format',
+	// 	name: 'base64Image',
+	// 	type: 'string',
+	// 	displayOptions: {
+	// 		show: {
+	// 			operation: ['blur'],
+	// 			resource: ['image'],
+	// 		},
+	// 	},
+	// 	default: '',
+	// 	description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
+	// },
 	{
 		displayName: 'Resize Strategy',
 		name: 'strategy',
