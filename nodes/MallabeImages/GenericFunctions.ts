@@ -16,7 +16,7 @@ export async function mallabeImagesRequest(
 	uri?: string,
 	option: IDataObject = {},
 ) {
-	const credentials = await this.getCredentials('mallabeImages');
+	const credentials = await this.getCredentials('mallabeImagesApi');
 	const n8nApiKey = 'xPHYKn7ar42idNoYrbyuc1xTk6LDWpPoIGvCRLK2';
 	const productionUrl = 'https://api.dev.mallabe.com';
 

@@ -44,6 +44,20 @@ export const blurFields: INodeProperties[] = [
 			'A value ranging from 0.3 to 1000. The higher the number, the more pronounced the blur effect.',
 	},
 	{
+		displayName: 'Download Image?',
+		name: 'download',
+		type: 'boolean',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['blur'],
+				resource: ['image'],
+			},
+		},
+		default: false,
+		description: 'Whether to download the Image or return a link to it',
+	},
+	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',

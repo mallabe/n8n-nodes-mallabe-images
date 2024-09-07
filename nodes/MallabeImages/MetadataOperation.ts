@@ -16,6 +16,20 @@ export const metadataFields: INodeProperties[] = [
 		description: 'Public URL of the image file to extract metadata from',
 	},
 	{
+		displayName: 'Download Image?',
+		name: 'download',
+		type: 'boolean',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['metadata'],
+				resource: ['image'],
+			},
+		},
+		default: false,
+		description: 'Whether to download the Image or return a link to it',
+	},
+	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',

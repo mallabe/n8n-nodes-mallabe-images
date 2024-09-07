@@ -29,6 +29,20 @@ export const greyscaleFields: INodeProperties[] = [
 		description: 'When using this field the max file size is only 4MB. Prefer using `Image URL`.',
 	},
 	{
+		displayName: 'Download Image?',
+		name: 'download',
+		type: 'boolean',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['greyscale'],
+				resource: ['image'],
+			},
+		},
+		default: false,
+		description: 'Whether to download the Image or return a link to it',
+	},
+	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',

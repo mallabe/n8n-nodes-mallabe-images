@@ -89,6 +89,20 @@ export const resizeFields: INodeProperties[] = [
 		description: 'Whether to remove Exif data from the image',
 	},
 	{
+		displayName: 'Download Image?',
+		name: 'download',
+		type: 'boolean',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['resize'],
+				resource: ['image'],
+			},
+		},
+		default: false,
+		description: 'Whether to download the Image or return a link to it',
+	},
+	{
 		displayName: 'Specify File Name',
 		name: 'fileName',
 		type: 'string',

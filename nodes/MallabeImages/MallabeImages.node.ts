@@ -24,7 +24,8 @@ export class MallabeImages implements INodeType {
 		group: ['transform'],
 		version: 1,
 		subtitle: '={{ $parameter["operation"] + ": " + $parameter["resource"] }}',
-		description: 'Mallabe Images is an automation toolchain that allows you to process images, resize, crop and apply other manipulations on images on the fly.',
+		description:
+			'Mallabe Images is an automation toolchain that allows you to process images, resize, crop and apply other manipulations on images on the fly.',
 		defaults: {
 			name: 'Mallabe Images',
 		},
@@ -123,7 +124,7 @@ export class MallabeImages implements INodeType {
 						value: 'rotate',
 						description: 'Rotate images and send the new image to another integration',
 						action: 'Rotate image',
-					}
+					},
 				],
 				default: 'resize',
 			},
@@ -145,6 +146,7 @@ export class MallabeImages implements INodeType {
 		const returnData: IDataObject[] = [];
 		const length = items.length;
 		const qs: IDataObject = {};
+		let response;
 		let responseData;
 		let download;
 		for (let i = 0; i < length; i++) {
@@ -174,13 +176,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
-							this,
-							'POST',
-							'/v1/images/resize',
-							body,
-							qs,
-						);
+						response = await mallabeImagesRequest.call(this, 'POST', '/v1/images/resize', body, qs);
 					} else if (operation === 'compress') {
 						const url = this.getNodeParameter('url', i) as string;
 						const quality = this.getNodeParameter('quality', i) as number;
@@ -196,7 +192,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
+						response = await mallabeImagesRequest.call(
 							this,
 							'POST',
 							'/v1/images/compress',
@@ -212,7 +208,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
+						response = await mallabeImagesRequest.call(
 							this,
 							'POST',
 							'/v1/images/metadata',
@@ -238,13 +234,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
-							this,
-							'POST',
-							'/v1/images/crop',
-							body,
-							qs,
-						);
+						response = await mallabeImagesRequest.call(this, 'POST', '/v1/images/crop', body, qs);
 					} else if (operation === 'flip') {
 						const url = this.getNodeParameter('url', i) as string;
 						const vertical = this.getNodeParameter('vertical', i) as boolean;
@@ -258,13 +248,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
-							this,
-							'POST',
-							'/v1/images/flip',
-							body,
-							qs,
-						);
+						response = await mallabeImagesRequest.call(this, 'POST', '/v1/images/flip', body, qs);
 					} else if (operation === 'rotate') {
 						const url = this.getNodeParameter('url', i) as string;
 						const angle = this.getNodeParameter('angle', i) as number;
@@ -278,13 +262,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
-							this,
-							'POST',
-							'/v1/images/rotate',
-							body,
-							qs,
-						);
+						response = await mallabeImagesRequest.call(this, 'POST', '/v1/images/rotate', body, qs);
 					} else if (operation === 'blur') {
 						const url = this.getNodeParameter('url', i) as string;
 						const value = this.getNodeParameter('value', i) as number;
@@ -296,13 +274,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
-							this,
-							'POST',
-							'/v1/images/blur',
-							body,
-							qs,
-						);
+						response = await mallabeImagesRequest.call(this, 'POST', '/v1/images/blur', body, qs);
 					} else if (operation === 'greyscale') {
 						const url = this.getNodeParameter('url', i) as string;
 						const webhookUrl = this.getNodeParameter('webhookUrl', i) as string;
@@ -312,7 +284,7 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
+						response = await mallabeImagesRequest.call(
 							this,
 							'POST',
 							'/v1/images/greyscale',
@@ -338,19 +310,29 @@ export class MallabeImages implements INodeType {
 							webhookUrl,
 						};
 
-						responseData = await mallabeImagesRequest.call(
-							this,
-							'POST',
-							'/v1/images/join',
-							body,
-							qs,
-						);
+						response = await mallabeImagesRequest.call(this, 'POST', '/v1/images/join', body, qs);
 					}
 
+					download = this.getNodeParameter('download', i);
 					if (download) {
-						// Handle download logic, if required, for each operation
+						const output = this.getNodeParameter('output', i) as string;
+						const buffer = (await mallabeImagesRequest.call(
+							this,
+							'GET',
+							'',
+							{},
+							{},
+							response.url as string,
+							{ json: false, encoding: null },
+						)) as Buffer;
+						responseData = {
+							json: response,
+							binary: {
+								[output]: await this.helpers.prepareBinaryData(buffer),
+							},
+						};
 					} else {
-						responseData = responseData;
+						responseData = response;
 					}
 				}
 

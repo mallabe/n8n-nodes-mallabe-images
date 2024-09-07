@@ -109,6 +109,20 @@ export const cropFields: INodeProperties[] = [
 		description: 'Offset from the top edge. Relevant only when gravity is set to `manual`.',
 	},
 	{
+		displayName: 'Download Image?',
+		name: 'download',
+		type: 'boolean',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['crop'],
+				resource: ['image'],
+			},
+		},
+		default: false,
+		description: 'Whether to download the Image or return a link to it',
+	},
+	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
