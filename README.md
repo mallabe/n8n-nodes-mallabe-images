@@ -1,6 +1,6 @@
 ![Banner image](https://user-images.githubusercontent.com/10284570/173569848-c624317f-42b1-45a6-ab09-f0ea3c247648.png)
 
-# n8n-nodes-starter
+# n8n-nodes-mallabe-images
 
 This repo contains example nodes to help you get started building your own custom integrations for [n8n](n8n.io). It includes the node linter and other dependencies.
 
@@ -11,7 +11,7 @@ To make your custom node available to the community, you must create it as an np
 You need the following installed on your development machine:
 
 * [git](https://git-scm.com/downloads)
-* Node.js and pnpm. Minimum version Node 18. You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
+* Node.js and pnpm. Minimum version Node 18 (prefer using `nvm`). You can find instructions on how to install both using nvm (Node Version Manager) for Linux, Mac, and WSL [here](https://github.com/nvm-sh/nvm). For Windows users, refer to Microsoft's guide to [Install NodeJS on Windows](https://docs.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows).
 * Install n8n with:
   ```
   pnpm install n8n -g
@@ -25,7 +25,7 @@ These are the basic steps for working with the starter. For detailed guidance on
 1. [Generate a new repository](https://github.com/n8n-io/n8n-nodes-starter/generate) from this template repository.
 2. Clone your new repo:
    ```
-   git clone https://github.com/<your organization>/<your-repo-name>.git
+   git clone https://github.com/mallabe/n8n-node-mallabe-images.git
    ```
 3. Run `pnpm i` to install dependencies.
 4. Open the project in your editor.
@@ -44,3 +44,11 @@ Refer to our [documentation on creating nodes](https://docs.n8n.io/integrations/
 ## License
 
 [MIT](https://github.com/n8n-io/n8n-nodes-starter/blob/master/LICENSE.md)
+
+### Running Locally (Summary)
+- Install n8n globally using https://docs.n8n.io/integrations/creating-nodes/test/run-node-locally/
+- Run `pnpm link n8n-nodes-mallabe-images --global` to register as package
+- Run `pnpm run build` whenever you make changes to the node
+- Run `cd ~/.n8n`
+- Run `pnpm link n8n-nodes-mallabe-images` in n8n folder
+- Run `n8n start`
