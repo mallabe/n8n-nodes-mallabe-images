@@ -89,20 +89,6 @@ export const resizeFields: INodeProperties[] = [
 		description: 'Whether to remove Exif data from the image',
 	},
 	{
-		displayName: 'Download Image?',
-		name: 'download',
-		type: 'boolean',
-		required: true,
-		displayOptions: {
-			show: {
-				operation: ['resize'],
-				resource: ['image'],
-			},
-		},
-		default: false,
-		description: 'Whether to download the Image or return a link to it',
-	},
-	{
 		displayName: 'Specify File Name',
 		name: 'fileName',
 		type: 'string',
@@ -127,6 +113,35 @@ export const resizeFields: INodeProperties[] = [
 		},
 		default: '',
 		description: 'Custom file extension for the resized image',
+	},
+	{
+		displayName: 'Download Image?',
+		name: 'download',
+		type: 'boolean',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['resize'],
+				resource: ['image'],
+			},
+		},
+		default: false,
+		description: 'Whether to download the Image or return a link to it',
+	},
+	{
+		displayName: 'Put Output File In Field',
+		name: 'output',
+		type: 'string',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['resize'],
+				resource: ['image'],
+				download: [true],
+			},
+		},
+		default: 'data',
+		description: 'The name of the output field to put the binary file data in',
 	},
 	{
 		displayName: 'Webhook URL (Advanced)',

@@ -5,7 +5,7 @@ import {
 	INodeType,
 	INodeTypeDescription,
 } from 'n8n-workflow';
-import { mallabeImagesRequest } from './GenericFunctions';
+import { mallabeImagesCdnRequest, mallabeImagesRequest } from './GenericFunctions';
 import { resizeFields } from './ResizeOperation';
 import { compressFields } from './CompressOperation';
 import { metadataFields } from './MetadataOperation';
@@ -316,14 +316,9 @@ export class MallabeImages implements INodeType {
 					download = this.getNodeParameter('download', i);
 					if (download) {
 						const output = this.getNodeParameter('output', i) as string;
-						const buffer = (await mallabeImagesRequest.call(
+						const buffer = (await mallabeImagesCdnRequest.call(
 							this,
-							'GET',
-							'',
-							{},
-							{},
-							response.url as string,
-							{ json: false, encoding: null },
+							response.data.url as string
 						)) as Buffer;
 						responseData = {
 							json: response,

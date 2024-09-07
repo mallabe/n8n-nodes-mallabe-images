@@ -70,6 +70,21 @@ export const rotateFields: INodeProperties[] = [
 		description: 'Whether to download the Image or return a link to it',
 	},
 	{
+		displayName: 'Put Output File In Field',
+		name: 'output',
+		type: 'string',
+		required: true,
+		displayOptions: {
+			show: {
+				operation: ['rotate'],
+				resource: ['image'],
+				download: [true],
+			},
+		},
+		default: 'data',
+		description: 'The name of the output field to put the binary file data in',
+	},
+	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
