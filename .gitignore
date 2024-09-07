@@ -1,8 +1,23 @@
-node_modules
+# OS related
 .DS_Store
+
+# IDE related
+.idea
+.vscode
+
+# Language related
+node_modules
+npm-debug.log*
+
+# Compiling related
+dist
+
+# turborepo
+.turbo
+
+# infra-stack
+/apps/infra-stack/just-something/
+
+# others
 .tmp
 tmp
-dist
-npm-debug.log*
-yarn.lock
-.vscode/launch.json
