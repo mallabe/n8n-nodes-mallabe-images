@@ -13,13 +13,12 @@ export const metadataFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'Public URL of the image file to extract metadata from.',
+		description: 'Public URL of the image file to extract metadata from',
 	},
 	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['metadata'],
@@ -27,6 +26,6 @@ export const metadataFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'URL to send a webhook with the data of the operation.',
+		description: 'URL to send a webhook with the data of the operation',
 	},
 ];

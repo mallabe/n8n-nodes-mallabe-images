@@ -5,7 +5,6 @@ export const resizeFields: INodeProperties[] = [
 		displayName: 'Image URL',
 		name: 'url',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
@@ -17,10 +16,9 @@ export const resizeFields: INodeProperties[] = [
 			'Public URL of the image file to resize. Use this field or `Image in Base64 Format`.',
 	},
 	{
-		displayName: 'Image in Base64 format',
+		displayName: 'Image in Base64 Format',
 		name: 'base64Image',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
@@ -47,13 +45,12 @@ export const resizeFields: INodeProperties[] = [
 				resource: ['image'],
 			},
 		},
-		description: 'Strategy to resize the image.',
+		description: 'Strategy to resize the image',
 	},
 	{
 		displayName: 'Width',
 		name: 'width',
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
@@ -68,7 +65,6 @@ export const resizeFields: INodeProperties[] = [
 		displayName: 'Height',
 		name: 'height',
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
@@ -84,20 +80,18 @@ export const resizeFields: INodeProperties[] = [
 		name: 'removeExif',
 		type: 'boolean',
 		default: false,
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
 				resource: ['image'],
 			},
 		},
-		description: 'Whether to remove Exif data from the image.',
+		description: 'Whether to remove Exif data from the image',
 	},
 	{
 		displayName: 'Specify File Name',
 		name: 'fileName',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
@@ -105,13 +99,12 @@ export const resizeFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'Custom file name for the resized image.',
+		description: 'Custom file name for the resized image',
 	},
 	{
 		displayName: 'Specify File Extension',
 		name: 'fileExtension',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
@@ -119,13 +112,12 @@ export const resizeFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'Custom file extension for the resized image.',
+		description: 'Custom file extension for the resized image',
 	},
 	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['resize'],
@@ -133,6 +125,6 @@ export const resizeFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'URL to send a webhook with the data of the operation.',
+		description: 'URL to send a webhook with the data of the operation',
 	},
 ];

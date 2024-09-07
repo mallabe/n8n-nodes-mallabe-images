@@ -13,14 +13,12 @@ export const joinFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description:
-			'Public URL of the first image file to join.',
+		description: 'Public URL of the first image file to join',
 	},
 	{
 		displayName: 'Second Image URL',
 		name: 'image2Url',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['join'],
@@ -28,8 +26,7 @@ export const joinFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description:
-			'Public URL of the second image file to join.',
+		description: 'Public URL of the second image file to join',
 	},
 	{
 		displayName: 'Direction',
@@ -47,7 +44,7 @@ export const joinFields: INodeProperties[] = [
 				resource: ['image'],
 			},
 		},
-		description: 'Direction of the merged image.',
+		description: 'Direction of the merged image',
 	},
 	{
 		displayName: 'Images Alignment',
@@ -71,36 +68,33 @@ export const joinFields: INodeProperties[] = [
 	{
 		displayName: 'Background Color',
 		name: 'backgroundColor',
-		type: 'string',
+		type: 'color',
 		default: '#000000',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['join'],
 				resource: ['image'],
 			},
 		},
-		description: 'Hex color code for the background.',
+		description: 'Hex color code for the background',
 	},
 	{
 		displayName: 'Offset',
 		name: 'offset',
 		type: 'number',
 		default: 0,
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['join'],
 				resource: ['image'],
 			},
 		},
-		description: 'Offset in pixels between each image.',
+		description: 'Offset in pixels between each image',
 	},
 	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['join'],
@@ -108,6 +102,6 @@ export const joinFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'URL to send a webhook with the data of the operation.',
+		description: 'URL to send a webhook with the data of the operation',
 	},
 ];

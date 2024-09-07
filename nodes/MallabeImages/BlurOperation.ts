@@ -5,7 +5,6 @@ export const blurFields: INodeProperties[] = [
 		displayName: 'Image URL',
 		name: 'url',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['blur'],
@@ -17,10 +16,9 @@ export const blurFields: INodeProperties[] = [
 			'Public URL of the image file to blur. Use this field or `Image in Base64 Format`.',
 	},
 	{
-		displayName: 'Image in Base64 format',
+		displayName: 'Image in Base64 Format',
 		name: 'base64Image',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['blur'],
@@ -49,7 +47,6 @@ export const blurFields: INodeProperties[] = [
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['blur'],
@@ -57,6 +54,6 @@ export const blurFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'URL to send a webhook with the data of the operation.',
+		description: 'URL to send a webhook with the data of the operation',
 	},
 ];

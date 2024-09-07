@@ -5,7 +5,6 @@ export const cropFields: INodeProperties[] = [
 		displayName: 'Image URL',
 		name: 'url',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['crop'],
@@ -17,10 +16,9 @@ export const cropFields: INodeProperties[] = [
 			'Public URL of the image file to crop. Use this field or `Image in Base64 Format`.',
 	},
 	{
-		displayName: 'Image in Base64 format',
+		displayName: 'Image in Base64 Format',
 		name: 'base64Image',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['crop'],
@@ -54,13 +52,12 @@ export const cropFields: INodeProperties[] = [
 				resource: ['image'],
 			},
 		},
-		description: 'Defines the pivot point from which to start cropping.',
+		description: 'Defines the pivot point from which to start cropping',
 	},
 	{
 		displayName: 'Crop Width',
 		name: 'width',
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['crop'],
@@ -74,7 +71,6 @@ export const cropFields: INodeProperties[] = [
 		displayName: 'Crop Height',
 		name: 'height',
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['crop'],
@@ -88,7 +84,6 @@ export const cropFields: INodeProperties[] = [
 		displayName: 'Left (X Axis)',
 		name: 'x',
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['crop'],
@@ -103,7 +98,6 @@ export const cropFields: INodeProperties[] = [
 		displayName: 'Top (Y Axis)',
 		name: 'y',
 		type: 'number',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['crop'],
@@ -118,7 +112,6 @@ export const cropFields: INodeProperties[] = [
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['crop'],
@@ -126,6 +119,6 @@ export const cropFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'URL to send a webhook with the data of the operation.',
+		description: 'URL to send a webhook with the data of the operation',
 	},
 ];

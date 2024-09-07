@@ -5,7 +5,6 @@ export const greyscaleFields: INodeProperties[] = [
 		displayName: 'Image URL',
 		name: 'url',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['greyscale'],
@@ -17,10 +16,9 @@ export const greyscaleFields: INodeProperties[] = [
 			'Public URL of the image file to convert to greyscale. Use this field or `Image in Base64 Format`.',
 	},
 	{
-		displayName: 'Image in Base64 format',
+		displayName: 'Image in Base64 Format',
 		name: 'base64Image',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['greyscale'],
@@ -34,7 +32,6 @@ export const greyscaleFields: INodeProperties[] = [
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['greyscale'],
@@ -42,6 +39,6 @@ export const greyscaleFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'URL to send a webhook with the data of the operation.',
+		description: 'URL to send a webhook with the data of the operation',
 	},
 ];

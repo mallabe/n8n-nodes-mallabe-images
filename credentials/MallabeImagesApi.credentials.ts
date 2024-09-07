@@ -2,12 +2,12 @@ import type { ICredentialType, INodeProperties, IAuthenticateGeneric, ICredentia
 
 const N8N_API_KEY = 'xPHYKn7ar42idNoYrbyuc1xTk6LDWpPoIGvCRLK2';
 
-export class MallabeImages implements ICredentialType {
-	name = 'mallabeImages';
+export class MallabeImagesApi implements ICredentialType {
+	name = 'mallabeImagesApi';
 
-	displayName = 'Mallabe Images';
+	displayName = 'Mallabe Images API';
 
-	documentationUrl = 'mallabeImages';
+	documentationUrl = 'https://www.mallabe.com';
 
 	properties: INodeProperties[] = [
 		{

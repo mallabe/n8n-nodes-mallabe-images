@@ -20,9 +20,10 @@ export class MallabeImages implements INodeType {
 	description: INodeTypeDescription = {
 		displayName: 'Mallabe Images',
 		name: 'mallabeImages',
-		icon: 'file:mallabe.png',
+		icon: 'file:mallabe.svg',
 		group: ['transform'],
 		version: 1,
+		subtitle: '={{ $parameter["operation"] + ": " + $parameter["resource"] }}',
 		description: 'Mallabe Images is an automation toolchain that allows you to process images, resize, crop and apply other manipulations on images on the fly.',
 		defaults: {
 			name: 'Mallabe Images',
@@ -31,7 +32,7 @@ export class MallabeImages implements INodeType {
 		outputs: ['main'],
 		credentials: [
 			{
-				name: 'mallabeImages',
+				name: 'mallabeImagesApi',
 				required: true,
 			},
 		],
@@ -66,64 +67,63 @@ export class MallabeImages implements INodeType {
 				},
 				options: [
 					{
-						name: 'Resize Image',
-						value: 'resize',
-						description:
-							"Resize or Scale images and drive the new image to another integration. Note: if a given URL isn't an image file (png, jpg/jpeg, gif, etc..) - the file will not convert.Note: some Zapier integrations give URLs that are protected - these can't be used & resized.",
-						action: 'Resize Image',
+						name: 'Blur Image',
+						value: 'blur',
+						description: 'Blur images and send the new image to another integration',
+						action: 'Blur image',
 					},
 					{
 						name: 'Compress Image',
 						value: 'compress',
 						description:
 							"Compress images and drive the new image to another integration.Note: if a given URL isn't an image file (png, jpg/jpeg, etc..) - the file will not convert. Note: some Zapier integrations give URLs that are protected - these can't be used & compressed.",
-						action: 'Compress Image',
-					},
-					{
-						name: 'Extract Image Metadata',
-						value: 'metadata',
-						description:
-							"Extract image metadata. Note: some integrations give URLs that are protected - these can't be used & resized.",
-						action: 'Extract Image Metadata',
+						action: 'Compress image',
 					},
 					{
 						name: 'Crop Image',
 						value: 'crop',
 						description:
 							"Crop images and send the new image to another integration. Note: If a given URL isn't an image file (e.g., png, jpg/jpeg, gif), the file will not convert. Also, some Zapier integrations provide protected URLs that cannot be cropped.",
-						action: 'Crop Image',
+						action: 'Crop image',
+					},
+					{
+						name: 'Extract Image Metadata',
+						value: 'metadata',
+						description:
+							"Extract image metadata. Note: some integrations give URLs that are protected - these can't be used & resized.",
+						action: 'Extract image metadata',
 					},
 					{
 						name: 'Flip Image',
 						value: 'flip',
 						description: 'Flip images and send the new image to another integration',
-						action: 'Flip Image',
-					},
-					{
-						name: 'Rotate Image',
-						value: 'rotate',
-						description: 'Rotate images and send the new image to another integration.',
-						action: 'Rotate Image',
-					},
-					{
-						name: 'Blur Image',
-						value: 'blur',
-						description: 'Blur images and send the new image to another integration.',
-						action: 'Blur Image',
+						action: 'Flip image',
 					},
 					{
 						name: 'Greyscale Image',
 						value: 'greyscale',
-						description: 'Greyscale images and send the new image to another integration.',
-						action: 'Greyscale Image',
+						description: 'Greyscale images and send the new image to another integration',
+						action: 'Greyscale image',
 					},
 					{
 						name: 'Join/Combine Images',
 						value: 'join',
-						description:
-							'Join images into one image and send the new image to another integration.',
-						action: 'Join/Combine Images',
+						description: 'Join images into one image and send the new image to another integration',
+						action: 'Join combine images',
 					},
+					{
+						name: 'Resize Image',
+						value: 'resize',
+						description:
+							"Resize or Scale images and drive the new image to another integration. Note: if a given URL isn't an image file (png, jpg/jpeg, gif, etc..) - the file will not convert.Note: some Zapier integrations give URLs that are protected - these can't be used & resized.",
+						action: 'Resize image',
+					},
+					{
+						name: 'Rotate Image',
+						value: 'rotate',
+						description: 'Rotate images and send the new image to another integration',
+						action: 'Rotate image',
+					}
 				],
 				default: 'resize',
 			},

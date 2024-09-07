@@ -5,7 +5,6 @@ export const flipFields: INodeProperties[] = [
 		displayName: 'Image URL',
 		name: 'url',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['flip'],
@@ -17,10 +16,9 @@ export const flipFields: INodeProperties[] = [
 			'Public URL of the image file to flip. Use this field or `Image in Base64 Format`.',
 	},
 	{
-		displayName: 'Image in Base64 format',
+		displayName: 'Image in Base64 Format',
 		name: 'base64Image',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['flip'],
@@ -35,34 +33,31 @@ export const flipFields: INodeProperties[] = [
 		name: 'vertical',
 		type: 'boolean',
 		default: false,
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['flip'],
 				resource: ['image'],
 			},
 		},
-		description: 'Whether to apply a vertical flip.',
+		description: 'Whether to apply a vertical flip',
 	},
 	{
 		displayName: 'Horizontal Flip',
 		name: 'horizontal',
 		type: 'boolean',
 		default: false,
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['flip'],
 				resource: ['image'],
 			},
 		},
-		description: 'Whether to apply a horizontal flip.',
+		description: 'Whether to apply a horizontal flip',
 	},
 	{
 		displayName: 'Webhook URL (Advanced)',
 		name: 'webhookUrl',
 		type: 'string',
-		required: false,
 		displayOptions: {
 			show: {
 				operation: ['flip'],
@@ -70,6 +65,6 @@ export const flipFields: INodeProperties[] = [
 			},
 		},
 		default: '',
-		description: 'URL to send a webhook with the data of the operation.',
+		description: 'URL to send a webhook with the data of the operation',
 	},
 ];
