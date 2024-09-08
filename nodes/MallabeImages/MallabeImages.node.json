@@ -2,7 +2,7 @@
 	"node": "n8n-nodes-base.mallabeImages",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["Images"],
+	"categories": ["Images", "Utilities"],
 	"resources": {
 		"credentialDocumentation": [
 			{
