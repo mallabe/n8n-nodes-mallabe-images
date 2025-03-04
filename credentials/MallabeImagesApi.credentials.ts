@@ -23,6 +23,7 @@ export class MallabeImagesApi implements ICredentialType {
 		type: 'generic',
 		properties: {
 			headers: {
+				'User-Agent': 'n8n',
 				'x-api-key': N8N_API_KEY,
 				'x-account-api-key': '={{$credentials.apiKey}}'
 			},
